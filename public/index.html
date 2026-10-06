@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FriendGroup Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="joinScreen" class="join-screen">
+    <div class="join-card">
+      <h1>FriendGroup Chat</h1>
+      <p>Choose a username to join the group chat.</p>
+      <input id="usernameInput" maxlength="24" placeholder="Username" autocomplete="off">
+      <button id="joinButton">Join Chat</button>
+    </div>
+  </div>
+
+  <main id="chatApp" class="app hidden">
+    <aside class="sidebar">
+      <h2>FriendGroup</h2>
+      <div class="room"># main-chat</div>
+      <h3>Online</h3>
+      <ul id="userList"></ul>
+    </aside>
+
+    <section class="chat">
+      <header class="chat-header">
+        <div>
+          <h1>FriendGroup Chat</h1>
+          <span id="status">Connecting...</span>
+        </div>
+      </header>
+
+      <div id="messages" class="messages"></div>
+
+      <div class="composer">
+        <label class="attach">
+          📎
+          <input id="imageInput" type="file" accept="image/*" hidden>
+        </label>
+        <textarea id="messageInput" rows="1" placeholder="Message the group..."></textarea>
+        <button id="sendButton">Send</button>
+      </div>
+
+      <div class="hint">Paste screenshots with Ctrl+V / Cmd+V.</div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
